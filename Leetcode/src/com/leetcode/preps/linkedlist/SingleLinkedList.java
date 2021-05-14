@@ -3,11 +3,11 @@ package com.leetcode.preps.linkedlist;
 /*
 * Use the idea of sentinel node i.e. head node. Head node will always be present with value -1.
 * */
-class SingleLinkedList {
+public class SingleLinkedList {
     linkedListNode head;
     int listSize;
 
-    class linkedListNode{
+    public class linkedListNode{
         int value;
         linkedListNode next;
 
@@ -41,6 +41,16 @@ class SingleLinkedList {
             linkedListNode current = head;
             for(int i=0;i<index;i++) current = current.next;
             return current.next.value;
+        }
+    }
+
+    public linkedListNode geNode(int index){
+        if(index > listSize - 1){
+            return new linkedListNode(-1);
+        }else{
+            linkedListNode current = head;
+            for(int i=0;i<index;i++) current = current.next;
+            return current.next;
         }
     }
 
