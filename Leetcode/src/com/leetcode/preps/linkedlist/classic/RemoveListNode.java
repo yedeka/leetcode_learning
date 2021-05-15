@@ -13,22 +13,22 @@ public class RemoveListNode {
     }
 
     public static ListNode removeElements(ListNode head, int val) {
-        if (null == head)
-            return null;
-        ListNode dummy = new ListNode(-2);
-        dummy.next = head;
-        ListNode previous = dummy;
-        ListNode current = head;
-        while(current != null){
-            if(current.val == val){
-                previous.next = current.next;
+            if (null == head)
+                return null;
+            ListNode dummy = new ListNode(-2);
+            dummy.next = head;
+            ListNode previous = dummy;
+            ListNode current = head;
+            while(current != null){
+                if(current.val == val){
+                    previous.next = current.next;
+                }
+                else{
+                    previous = current;
+                }
+                current = current.next;
             }
-            else{
-                previous = current;
-            }
-            current = current.next;
-        }
-        return dummy.next;
+            return dummy.next;
     }
 
     public static void main(String[] args){
