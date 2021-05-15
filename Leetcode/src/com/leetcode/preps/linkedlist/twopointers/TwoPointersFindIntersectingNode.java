@@ -1,4 +1,4 @@
-package com.leetcode.preps.linkedlist;
+package com.leetcode.preps.linkedlist.twopointers;
 
 public class TwoPointersFindIntersectingNode {
     public static class ListNode{
