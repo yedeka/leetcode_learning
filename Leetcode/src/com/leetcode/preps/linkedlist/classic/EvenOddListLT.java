@@ -14,9 +14,9 @@ public class EvenOddListLT {
         ListNode odd = head.next;
         ListNode evenHead = odd.next, even = odd.next;
         while(even!= null && even.next != null){
-            odd.next = odd.next.next;
-            even.next = even.next.next;
+            odd.next = even.next;
             odd = odd.next;
+            even.next = odd.next;
             even = even.next;
         }
         odd.next = evenHead;
