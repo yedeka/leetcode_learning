@@ -5,7 +5,7 @@ public class SortedArraySquares {
         int squareLength = nums.length - 1;
         int[] squareArray = new int[squareLength + 1];
         int left = 0, right =  squareLength;
-        while(left < right){
+        while(left <= right){
             if(Math.abs(nums[left]) > Math.abs(nums[right])){
                 squareArray[squareLength] = nums[left] * nums[left];
                 left ++;
