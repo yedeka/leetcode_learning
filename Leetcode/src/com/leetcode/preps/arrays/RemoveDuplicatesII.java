@@ -1,5 +1,6 @@
 package com.leetcode.preps.arrays;
 
+/* Remove deuplicates from an array of numebrs such that it has only 2 duplicates of each number.*/
 public class RemoveDuplicatesII {
     public static int removeDuplicates(int[] nums) {
     int j = 1, count = 1;
