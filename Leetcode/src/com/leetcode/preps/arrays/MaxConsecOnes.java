@@ -9,6 +9,7 @@ package com.leetcode.preps.arrays;
 * */
 public class MaxConsecOnes {
     private static int findMaxConsecutiveOnes(int[] nums){
+        if(null == nums || nums.length == 0) return 0;
         int windowStart =0, windowEnd = 0, zeroCount=0, longestOnes = 0;
         while(windowEnd < nums.length){
             //If element at windowend index is 0 increment the zero count
