@@ -15,12 +15,39 @@ public class FindSmallestLetter {
             if(seen[target - 'a']) return target;
         }
     }
+
+    private static char findSmallestGreaterthanTargetSimple(char[] input, char target){
+        for(char letter: input){
+            if(letter > target) return letter;
+        }
+        return input[0];
+    }
+
+    private static char findSmallestGreaterthanTargetbinarySearch(char[] input, char target){
+        int lo = 0,hi = input.length, mid;
+        while(lo < hi){
+            mid = lo + (hi - lo)/2;
+            char midChar = input[mid];
+            if( midChar <= target) lo= mid + 1;
+            else hi = mid;
+        }
+        return input[lo % input.length];
+    }
+
+
+
+
     public static void main(String[] args){
         char[] input = new char[]{'a','d','g'};
         char target = 'c';
         System.out.println("Smallest character greater than "+target+" => "+findSmallestGreaterthanTarget(input, target));
         target = 'j';
-        System.out.println("Smallest character greater than "+target+" => "+findSmallestGreaterthanTarget(input, target));
+        System.out.println("Smallest character greater than "+target+" => "+findSmallestGreaterthanTargetSimple(input, target));
+        input = new char[]{'c','f','j'};
+        target = 'a';
+        System.out.println("Smallest character greater than "+target+" => "+findSmallestGreaterthanTargetbinarySearch(input, target));
+        target = 'j';
+        System.out.println("Smallest character greater than "+target+" => "+findSmallestGreaterthanTargetbinarySearch(input, target));
 
 
     }
