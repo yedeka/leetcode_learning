@@ -13,10 +13,25 @@ public class FindPerfectSquare {
         }
         return false;
     }
+
+    private static boolean isPerfectSquareNewtons(int num){
+        if (num < 2) return true;
+        long x = num / 2;
+        while(x * x > num){
+            x = ( x + (num /x))/2;
+        }
+        return x * x == num;
+    }
+
     public static void main(String[] args){
         int num = 16;
         System.out.println("Is "+num+" a perfect square => "+isPerfectSquare(num));
         num = 7;
         System.out.println("Is "+num+" a perfect square => "+isPerfectSquare(num));
+        num = 12;
+        System.out.println("Is "+num+" a perfect square using Newton's method=> "+isPerfectSquareNewtons(num));
+        num = 25;
+        System.out.println("Is "+num+" a perfect square using Newton's method=> "+isPerfectSquareNewtons(num));
+
     }
 }
