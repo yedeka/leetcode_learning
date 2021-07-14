@@ -1,6 +1,5 @@
-package com.educative.algods.crashcourse.dfs.julychallenge;
+package com.leetcode.preps.julychallenge;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class RemoveLeaves {
