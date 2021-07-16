@@ -1,7 +1,10 @@
 package com.educative.algods.crashcourse.twoPointers;
 
 import java.util.HashMap;
-
+/*
+* Given an array of integers and a target sum find out whether the array contains a subarray having target sum.
+* Solution - This is a classic Prefix sum problem
+* */
 public class SubarraySum {
     private static int[] findTargetSum(int[] input, int target){
         if(input == null || input.length == 0) return new int[]{-1, -1};
