@@ -28,5 +28,25 @@ public class RemoveDuplicates {
             strNums = strNums + nums[i] + ",";
         }
         System.out.println(strNums.substring(0,strNums.length()-1)+"]");
+
+        nums = new int[]{2};
+        uniqueIndex = removeDuplicates(nums);
+        System.out.print("[");
+        strNums = "";
+        for(int i=0;i<=uniqueIndex;i++){
+            strNums = strNums + nums[i] + ",";
+        }
+        System.out.println(strNums.substring(0,strNums.length()-1)+"]");
+
+        nums = new int[]{};
+        uniqueIndex = removeDuplicates(nums);
+        System.out.print("[");
+        strNums = "";
+        for(int i=0;i<=uniqueIndex;i++){
+            strNums = strNums + nums[i] + ",";
+        }
+        if(strNums.length() > 0) System.out.println(strNums.substring(0,strNums.length()-1)+"]");
+        else System.out.println("]");
+
     }
 }
